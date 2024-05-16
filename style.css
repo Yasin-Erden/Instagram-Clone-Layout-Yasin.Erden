@@ -4,9 +4,177 @@
     box-sizing: border-box;
 }
 
-img {
-    width: 200px;
-    height: 200px;
+body{
+    max-width: 90%;
+    margin: 5rem auto;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    max-width: 80%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Profilbild {
+    /* grid-area: profilbild; */
+    background-image: linear-gradient(to right top, yellow, red);
+    display: flex;
+    align-self: center;    
+    justify-content: center;
+    width: 15vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.Profilbild > img {
+    width: 95%;
+    height: 95%;
     object-fit: cover;
     border-radius: 50%;
+    align-self: center;
+    border: 2px solid white;
+}
+
+.profil-uebersicht{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    grid-area: profil-uebersicht;
+    font-size: 16px;
+}
+
+.Profilname > input{
+    border: none;
+    border-radius: 8px;
+    padding: 1px 30px;
+    font-weight: bold;
+}
+.Profilname > input:nth-child(2){
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
+.Storys>ul, .Profilname, .Follower-zahl>ul, .profil-link , .links, .profil-page  {
+    display: flex;
+    gap: 1rem;
+}
+.Follower-zahl ul li{
+    margin-left: 1rem;
+}
+
+.Storys{
+    /* background-image: linear-gradient(to right top, yellow, red); */
+    margin: 5rem;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    
+}
+.Storys ul li h4{
+    text-align: center;
+}
+.Storys ul li {
+    max-width: 7rem;
+    max-height: 7rem;
+    list-style: none;
+}
+
+.Storys > ul > li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: 1rem;
+    border: 2px solid rgb(175, 175, 175);
+}
+
+nav {
+    margin: 5rem auto;
+    border-top: 1px solid rgb(0, 0, 0, 0.5);
+    max-width: 80%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 1rem;
+}
+
+nav ul li a i {
+    font-size: 0.6em;
+}
+
+nav ul li:hover{
+    border-top: 2px solid black;
+    
+}
+
+.img-container > .Instagram-Posts:nth-child(1) {
+    background-image: url("images/images-1.jpeg");
+}
+
+.img-container > .Instagram-Posts:nth-child(2) {
+    background-image: url("images/images-2.jpg");
+}
+
+.img-container > .Instagram-Posts:nth-child(3) {
+    background-image: url("images/images-3.jpg");
+}
+
+.img-container > .Instagram-Posts:nth-child(4) {
+    background-image: url("images/images-4.webp");
+}
+
+.img-container > .Instagram-Posts:nth-child(5) {
+    background-image: url("images/images-5.jpg");
+}
+
+.img-container > .Instagram-Posts:nth-child(6) {
+    background-image: url("images/images-6.jpg");
+}
+
+.img-container > .Instagram-Posts:nth-child(7) {
+    background-image: url("images/images-7.jpg");
+}
+
+.img-container > .Instagram-Posts:nth-child(8) {
+    background-image: url("images/images-8.jpg");
+}
+
+.img-container > .Instagram-Posts:nth-child(9) {
+    background-image: url("images/images-9.jpg");
+}
+
+.img-container{
+    /* generelle breite von max 85%, abstand nach oben und zu den seiten Auto eingestellt, dann grid mit einem template hinzugefügt, Auto-Fit= so viele Spalten wie möglich in die verfügbare breite passen und mit minmax, 30rem mindestbreite und 1fr max breite */
+    max-width: 80%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.img-container > .Instagram-Posts{
+    /* höhe der einzelnen container, breite ist ein dadrüber angegeben*/
+    /* width: 33%; */
+    height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.Instagram-Posts > i {
+    color: white;
+
 }
