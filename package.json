@@ -1,0 +1,36 @@
+{
+  "name": "instagram-clone-layout-yasin.erden",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p watch watch:styles",
+    "build": "run-s clean clean:styles build:styles copy",
+    "build:styles": "sass src/scss:src/styles",
+    "watch": "live-server src",
+    "watch:styles": "sass src/scss:src/styles --watch",
+    "clean": "rm -rf dist",
+    "clean:styles": "rm -rf src/styles",
+    "copy": "mkdir dist && rsync -avr --exclude=\"/scss\" src/ dist",
+    "deploy": "run-s build publish",
+    "publish": "gh-pages -d dist",
+    "create": "mkdir src && mkdir src/scss && mkdir src/html && touch src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasin-Erden/Instagram-Clone-Layout-Yasin.Erden.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yasin-Erden/Instagram-Clone-Layout-Yasin.Erden/issues"
+  },
+  "homepage": "https://github.com/Yasin-Erden/Instagram-Clone-Layout-Yasin.Erden#readme",
+  "devDependencies": {
+    "sass": "^1.77.4"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
